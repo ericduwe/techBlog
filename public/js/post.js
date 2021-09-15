@@ -1,13 +1,12 @@
 const newFormHandler = async (event) => {
     event.preventDefault();
   
-    const title = document.querySelector('#project-name').value
-    const contents = document.querySelector('#project-desc').value
+    const comment = document.querySelector('#comment').value
   
-    if (title && contents) {
-      const response = await fetch(`/api/posts`, {
+    if (comment) {
+      const response = await fetch(`/api/post/${id}`, {
         method: 'POST',
-        body: JSON.stringify({ title, contents }),
+        body: JSON.stringify({ comment }),
         headers: {
           'Content-Type': 'application/json',
         },
@@ -16,7 +15,7 @@ const newFormHandler = async (event) => {
       if (response.ok) {
         document.location.replace('/profile');
       } else {
-        alert('Failed to create project');
+        alert('Failed to add comment');
       }
     }
   };
@@ -38,7 +37,7 @@ const newFormHandler = async (event) => {
   };
   
   document
-    .querySelector('.new-post-form')
+    .querySelector('.new-comment-form')
     .addEventListener('submit', newFormHandler);
   
   document

@@ -10,6 +10,7 @@
 
     <form class="form new-comment-form">
       <div class="form-group">
+        <input type="hidden" name="post-id" value='{{post.id}}'/>
         <label for="comment">Add a comment:</label>
         <textarea class="form-input" id="comment" name="comment"></textarea>
       </div>

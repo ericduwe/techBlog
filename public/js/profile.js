@@ -1,8 +1,8 @@
 const newFormHandler = async (event) => {
     event.preventDefault();
   
-    const title = document.querySelector('#project-name').value
-    const contents = document.querySelector('#project-desc').value
+    const title = document.querySelector('#post-name').value
+    const contents = document.querySelector('#post-desc').value
   
     if (title && contents) {
       const response = await fetch(`/api/posts`, {
@@ -16,7 +16,7 @@ const newFormHandler = async (event) => {
       if (response.ok) {
         document.location.replace('/profile');
       } else {
-        alert('Failed to create project');
+        alert('Failed to create post');
       }
     }
   };

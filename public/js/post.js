@@ -2,18 +2,19 @@ const newFormHandler = async (event) => {
     event.preventDefault();
   
     const comment = document.querySelector('#comment').value
+    const postId = document.querySelector('textarea[name="post-id"]').value
   
     if (comment) {
-      const response = await fetch(`/api/post/${id}`, {
+      const response = await fetch(`/api/comments`, {
         method: 'POST',
-        body: JSON.stringify({ comment }),
+        body: JSON.stringify({ comment, postId }),
         headers: {
           'Content-Type': 'application/json',
         },
       });
   
       if (response.ok) {
-        document.location.replace('/profile');
+        document.location.reload();
       } else {
         alert('Failed to add comment');
       }
@@ -41,6 +42,6 @@ const newFormHandler = async (event) => {
     .addEventListener('submit', newFormHandler);
   
   document
-    .querySelector('.project-list')
+    .querySelector('')
     .addEventListener('click', delButtonHandler);
   

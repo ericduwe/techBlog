@@ -1,19 +1,32 @@
-header, .project:not(:last-child) {
+header, .project {
     border-bottom: 1px solid #ccc;
-  }
+    background-color: rgb(212, 86, 28);
+    
+}
+
+a {
+  color: white
+}
+
+
+nav a {
+  color: white
+
+}
+
   
   .no-button {
     background: none;
     border: none;
     padding: 0;
     cursor: pointer;
-    color: #1b89bc;
+    color: white;
     text-decoration: none;
     font-size: 100%;
   }
   
   .no-button:hover {
-    color: #065b83;
+    color: #b3d0dd;
     text-decoration: underline;
   }
   

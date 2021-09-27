@@ -24,7 +24,7 @@ None
 n/a
 
 ## Usage
-![Screenshot of home dashboard](./assets/techBlog_Screenshot.png)
+![Screenshot of home dashboard](./assets/techBlog_Screenshot.PNG)
 
 ## Contributions
 This project is not open to outside contributions at this time.
